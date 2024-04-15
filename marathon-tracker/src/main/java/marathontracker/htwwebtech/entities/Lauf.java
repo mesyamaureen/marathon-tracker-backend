@@ -9,7 +9,7 @@ import java.time.LocalTime;
 import java.util.Date;
 
 @Entity
-public class ToDoLauf {
+public class Lauf {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
@@ -24,10 +24,10 @@ public class ToDoLauf {
         private String schmerz;
 
         //parameterloser Konstruktor
-        public ToDoLauf() {}
+        public Lauf() {}
 
         //Konstruktor mit parameter
-        public ToDoLauf(Date datum, String art, String titel, Long distanz, LocalTime zeit, String gefuehl, Integer aufwand, String beschreibung, String schmerz) {
+        public Lauf(Date datum, String art, String titel, Long distanz, LocalTime zeit, String gefuehl, Integer aufwand, String beschreibung, String schmerz) {
             this.datum = datum;
             this.art = art;
             this.titel = titel;
