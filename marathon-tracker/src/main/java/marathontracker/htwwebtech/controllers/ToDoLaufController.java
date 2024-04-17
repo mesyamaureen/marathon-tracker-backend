@@ -1,38 +1,41 @@
 package marathontracker.htwwebtech.controllers;
 
 import marathontracker.htwwebtech.entities.ToDoLauf;
+import marathontracker.htwwebtech.services.ToDoLaufService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class ToDoLaufController {
     @Autowired
-    ToDoLauf service;
+    ToDoLaufService service;
 
-    @PostMapping("/laufplan")
-    public ToDoLauf createToDoLauf(@RequestBody Laufplan laufplan) {
-        return service.save(laufplan);
+    @PostMapping("/todolauf")
+    public ToDoLauf createToDoLauf(@RequestBody ToDoLauf toDoLauf) {
+        return service.save(toDoLauf);
     }
 
-    @GetMapping("/alleLaufplaene/{id}")
+    @GetMapping("/alleToDoLaufs/{id}")
     public ToDoLauf getToDoLauf(@PathVariable String id) {
-        Long laufplanId = Long.parseLong(id);
-        return service.get(laufplanId);
+        Long toDoLaufId = Long.parseLong(id);
+        return service.get(toDoLaufId);
     }
 
-    @GetMapping("/alleLaufplaene")
-    public List<Laufplan> getLaufplaene() {
-        return service.getLaufplaene();
+    @GetMapping("/alleToDoLaufs")
+    public List<ToDoLauf> getToDoLaufs() {
+        return service.getToDoLaufs();
     }
 
-    @PutMapping("/alleLaufplaene/{id}")
-    public Laufplan updateLaufplan(@PathVariable Long id, @RequestBody Laufplan laufplan) {
-        return service.update(id, laufplan);
+    @PutMapping("/alleToDoLaufs/{id}")
+    public ToDoLauf updateToDoLauf(@PathVariable Long id, @RequestBody ToDoLauf toDoLauf) {
+        return service.update(id, toDoLauf);
     }
 
-    @DeleteMapping("/alleLaufplaene/{id}")
-    public boolean deleteLaufplan(@PathVariable String id) {
-        Long laufplanId = Long.parseLong(id);
-        return service.delete(laufplanId);
+    @DeleteMapping("/alleToDoLaufs/{id}")
+    public boolean deleteToDoLauf(@PathVariable String id) {
+        Long toDoLaufId = Long.parseLong(id);
+        return service.delete(toDoLaufId);
     }
 }
