@@ -56,8 +56,8 @@ replay_pid*
 
 # gradle
 *.idea
-# .gradle
-# build
+.gradle
+build
 
 .DS_Store
 # H2 Database
