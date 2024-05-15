@@ -2,7 +2,7 @@
 # Build stage
 #
 FROM gradle:jdk17-jammy AS build
-COPY --chown=gradle:gradle . /home/marathon-tracker/gradle/src
+COPY --chown=gradle:gradle marathon-tracker /home/marathon-tracker/gradle/src
 WORKDIR /home/marathon-tracker/gradle/src
 RUN gradle build --no-daemon -x test
 
