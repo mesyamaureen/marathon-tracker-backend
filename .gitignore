@@ -56,11 +56,11 @@ replay_pid*
 
 # gradle
 *.idea
-*.gradle
-build
+# .gradle
+# build
 
 .DS_Store
-
 # H2 Database
 *.mv.db
 *.trace.db
+HELP.md
