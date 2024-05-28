@@ -17,7 +17,7 @@ public class Lauf {
         private String art;
         private String titel;
         private Long distanz;
-        private LocalTime zeit;
+        private String zeit;
         private String gefuehl;
         private Integer aufwand;
         private String beschreibung;
@@ -27,7 +27,7 @@ public class Lauf {
         public Lauf() {}
 
         //Konstruktor mit parameter
-        public Lauf(Date datum, String art, String titel, Long distanz, LocalTime zeit, String gefuehl, Integer aufwand, String beschreibung, String schmerz) {
+        public Lauf(Date datum, String art, String titel, Long distanz, String zeit, String gefuehl, Integer aufwand, String beschreibung, String schmerz) {
             this.datum = datum;
             this.art = art;
             this.titel = titel;
@@ -50,8 +50,8 @@ public class Lauf {
         public void setTitel(String titel) { this.titel = titel; }
         public Long getDistanz() { return distanz; }
         public void setDistanz(Long distanz) { this.distanz = distanz; }
-        public LocalTime getZeit() { return zeit; }
-        public void setZeit(LocalTime zeit) { this.zeit = zeit; }
+        public String getZeit() { return zeit; }
+        public void setZeit(String zeit) { this.zeit = zeit; }
         public String getGefuehl() { return gefuehl; }
         public void setGefuehl(String gefuehl) { this.gefuehl = gefuehl; }
         public Integer getAufwand() { return aufwand; }
