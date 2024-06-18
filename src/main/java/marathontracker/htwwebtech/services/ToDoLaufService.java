@@ -31,9 +31,9 @@ public class ToDoLaufService {
         currentToDoLauf.setDatum(toDoLauf.getDatum());
         currentToDoLauf.setArt(toDoLauf.getArt());
         currentToDoLauf.setTitel(toDoLauf.getTitel());
+        currentToDoLauf.setDistanz(toDoLauf.getDistanz());
         currentToDoLauf.setBeschreibung(toDoLauf.getBeschreibung());
         currentToDoLauf.setStatus(toDoLauf.getStatus());
-        currentToDoLauf.setZeit(toDoLauf.getZeit());
         return ToDoLaufRepo.save(currentToDoLauf);
     }
 
