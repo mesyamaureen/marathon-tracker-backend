@@ -16,16 +16,18 @@ public class ToDoLauf {
     private Date datum;
     private String art;
     private String titel;
+    private Long distanz;
     private String beschreibung;
     private Boolean status;
     private LocalTime zeit;
 
     public ToDoLauf(){}
 
-    public ToDoLauf(Date datum, String art, String titel, String beschreibung, Boolean status, LocalTime zeit) {
+    public ToDoLauf(Date datum, String art, String titel, Long distanz, String beschreibung, Boolean status, LocalTime zeit) {
         this.datum = datum;
         this.art = art;
         this.titel = titel;
+        this.distanz = distanz;
         this.beschreibung = beschreibung;
         this.status = status;
         this.zeit = zeit;
@@ -40,6 +42,8 @@ public class ToDoLauf {
     public void setArt(String art) { this.art = art; }
     public String getTitel() { return titel; }
     public void setTitel(String titel) { this.titel = titel; }
+    public Long getDistanz() { return distanz; }
+    public void setDistanz(Long distanz) { this.distanz = distanz; }
     public String getBeschreibung() { return beschreibung; }
     public void setBeschreibung(String beschreibung) { this.beschreibung = beschreibung; }
     public Boolean getStatus() { return status;}
