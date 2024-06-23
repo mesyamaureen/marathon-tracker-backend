@@ -23,7 +23,7 @@ public class LaufController {
         Long laufId = Long.parseLong(id);
         return service.get(laufId);
     }
-    @CrossOrigin(origins = "https://marathon-tracker-frontend.onrender.com")
+    @CrossOrigin(origins = "http://localhost:5432/")
     @GetMapping("/alleLaeufe")
     public List<Lauf> getLaeufe() {
         return service.getLaeufe();
