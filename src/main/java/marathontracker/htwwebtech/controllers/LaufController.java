@@ -17,23 +17,24 @@ public class LaufController {
     public Lauf createLauf(@RequestBody Lauf lauf) {
         return service.save(lauf);
     }
-    @CrossOrigin(origins = "https://marathon-tracker-frontend.onrender.com")
+
     @GetMapping("/alleLaeufe/{id}")
     public Lauf getLauf(@PathVariable String id) {
         Long laufId = Long.parseLong(id);
         return service.get(laufId);
     }
-    @CrossOrigin(origins = "http://localhost:5432/")
+
     @GetMapping("/alleLaeufe")
     public List<Lauf> getLaeufe() {
         return service.getLaeufe();
     }
-    @CrossOrigin(origins = "https://marathon-tracker-frontend.onrender.com")
+
+
     @PutMapping("/alleLaeufe/{id}")
     public Lauf updateLauf(@PathVariable Long id, @RequestBody Lauf lauf) {
         return service.update(id, lauf);
     }
-    @CrossOrigin(origins = "https://marathon-tracker-frontend.onrender.com")
+
     @DeleteMapping("/alleLaeufe/{id}")
     public boolean deleteLauf(@PathVariable String id) {
         Long laufId = Long.parseLong(id);
