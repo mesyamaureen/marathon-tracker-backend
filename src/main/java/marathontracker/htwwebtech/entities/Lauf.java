@@ -4,7 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import org.springframework.cglib.core.Local;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 
@@ -13,7 +15,7 @@ public class Lauf {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
-        private Date datum;
+        private LocalDate datum;
         private String art;
         private String titel;
         private Long distanz;
@@ -27,7 +29,7 @@ public class Lauf {
         public Lauf() {}
 
         //Konstruktor mit parameter
-        public Lauf(Date datum, String art, String titel, Long distanz, String zeit, String gefuehl, Integer aufwand, String beschreibung, String schmerz) {
+        public Lauf(LocalDate datum, String art, String titel, Long distanz, String zeit, String gefuehl, Integer aufwand, String beschreibung, String schmerz) {
             this.datum = datum;
             this.art = art;
             this.titel = titel;
@@ -42,8 +44,8 @@ public class Lauf {
         //getter setter
         public Long getId() { return id; }
         public void setId(Long id) { this.id = id; }
-        public Date getDatum() { return datum; }
-        public void setDatum(Date datum) { this.datum = datum; }
+        public LocalDate getDatum() { return datum; }
+        public void setDatum(LocalDate datum) { this.datum = datum; }
         public String getArt() { return art; }
         public void setArt(String art) { this.art = art; }
         public String getTitel() { return titel; }

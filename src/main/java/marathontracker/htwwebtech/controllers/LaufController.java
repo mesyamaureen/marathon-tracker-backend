@@ -12,7 +12,7 @@ public class LaufController {
     @Autowired
     LaufService service;
     // test - render
-    @CrossOrigin(origins = "https://marathon-tracker-frontend.onrender.com")
+
     @PostMapping("/lauf")
     public Lauf createLauf(@RequestBody Lauf lauf) {
         return service.save(lauf);

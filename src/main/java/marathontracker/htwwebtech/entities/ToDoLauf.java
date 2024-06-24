@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 
@@ -13,7 +14,7 @@ public class ToDoLauf {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date datum;
+    private LocalDate datum;
     private String art;
     private String titel;
     private Long distanz;
@@ -22,7 +23,7 @@ public class ToDoLauf {
 
     public ToDoLauf(){}
 
-    public ToDoLauf(Date datum, String art, String titel, Long distanz, String beschreibung, Boolean status) {
+    public ToDoLauf(LocalDate datum, String art, String titel, Long distanz, String beschreibung, Boolean status) {
         this.datum = datum;
         this.art = art;
         this.titel = titel;
@@ -34,8 +35,8 @@ public class ToDoLauf {
     //getter setter
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
-    public Date getDatum() { return datum; }
-    public void setDatum(Date datum) { this.datum = datum; }
+    public LocalDate getDatum() { return datum; }
+    public void setDatum(LocalDate datum) { this.datum = datum; }
     public String getArt() { return  art; }
     public void setArt(String art) { this.art = art; }
     public String getTitel() { return titel; }
