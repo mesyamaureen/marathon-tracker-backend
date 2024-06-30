@@ -6,8 +6,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.Date;
 
 @Entity
 public class ToDoLauf {
@@ -32,7 +30,6 @@ public class ToDoLauf {
         this.status = status;
     }
 
-    //getter setter
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public LocalDate getDatum() { return datum; }

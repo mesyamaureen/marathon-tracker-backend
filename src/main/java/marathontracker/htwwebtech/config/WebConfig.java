@@ -9,7 +9,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry){
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:5432", "https://marathon-tracker-frontend.onrender.com")
+                .allowedOrigins("https://marathon-tracker-frontend.onrender.com")
                 .allowedMethods("*");
     }
 }

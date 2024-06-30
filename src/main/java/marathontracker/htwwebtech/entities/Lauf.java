@@ -4,11 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.Date;
 
 @Entity
 public class Lauf {
@@ -25,10 +22,8 @@ public class Lauf {
         private String beschreibung;
         private String schmerz;
 
-        //parameterloser Konstruktor
         public Lauf() {}
 
-        //Konstruktor mit parameter
         public Lauf(LocalDate datum, String art, String titel, Long distanz, String zeit, String gefuehl, Integer aufwand, String beschreibung, String schmerz) {
             this.datum = datum;
             this.art = art;
@@ -41,7 +36,6 @@ public class Lauf {
             this.schmerz = schmerz;
         }
 
-        //getter setter
         public Long getId() { return id; }
         public void setId(Long id) { this.id = id; }
         public LocalDate getDatum() { return datum; }

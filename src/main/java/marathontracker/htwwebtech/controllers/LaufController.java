@@ -11,7 +11,6 @@ import java.util.List;
 public class LaufController {
     @Autowired
     LaufService service;
-    // test - render
 
     @PostMapping("/lauf")
     public Lauf createLauf(@RequestBody Lauf lauf) {
